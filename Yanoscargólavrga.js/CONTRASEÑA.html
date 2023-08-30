@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let usuarioCorrecto = "usuario123";
+     let contrasenaCorrecta = "contrasena123";
+
+     function iniciarSesion(nombreUsuario, contrasena) {
+        if (nombreUsuario === usuarioCorrecto && contrasena === contrasenaCorrecta) {
+         alert("Inicio de sesión exitoso.");
+        } else {
+         alert("Nombre de usuario o contraseña incorrectos.");
+        }
+        }
+
+         try {
+          let nombreUsuarioIngresado = prompt("Ingrese su nombre de usuario:");
+          let contrasenaIngresada = prompt("Ingrese su contraseña:");
+          iniciarSesion(nombreUsuarioIngresado, contrasenaIngresada);
+         } catch (error) {
+          console.error(error.message);
+         }
+    </script>
+</body>
+</html>
