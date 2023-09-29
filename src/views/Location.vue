@@ -7,8 +7,22 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 onMounted(() => {
-    
+      
 })
+
+
+
+const getCharacter= async()=>{
+    await axios.get('https://rickandmortyapi.com/api/character')
+
+    .then((resolve)=> {
+
+        console.log(resolve);
+    }).catch((error)=>{
+        console.log(error);
+    })
+
+}
 
 </script>
 
