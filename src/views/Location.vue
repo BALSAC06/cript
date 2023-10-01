@@ -1,29 +1,31 @@
 <template>
     
-   
-    <div class="contenedor">
-        <section  style="padding-bottom: 1rem; padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :green; border: solid green 4px;" v-for="value in character" >
-        
-        <div class="contendor_hijo">
+   <body>
+    <H2>LUGARES</H2>
+        <div class="box">
+            <section  style="margin: 0 auto; padding-bottom: 1rem; padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :black; border: solid gold 4px;" v-for="value in character" >
             
-            <div>
+            <div class="content">
                 
-                {{ value.name }}
-            </div>
-        
-            <div style="padding-top: 1.5rem;">    
-                {{ value.type }}
-            </div>
-
-            <div style="padding-top: 1rem;">
-                {{value.dimension }}
+                <div>
+                    
+                    {{ value.name }}
+                </div>
             
+                <div style="padding-top: 1.5rem;">    
+                    {{ value.type }}
+                </div>
+
+                <div style="padding-top: 1rem;">
+                    {{value.dimension }}
+                
+                </div>
             </div>
+
+
+            </section>
         </div>
-
-
-        </section>
-    </div>
+    </body>
 </template>
 
 <script setup>
@@ -50,14 +52,28 @@ const getCharacter= async()=>{
 </script>
 
 <style>
-
-.contenedor{
-    display: grid;
-    grid-template-columns: 320px 320px 320px;
+body{
+    background-image: url(../c137.webp)
+    ;
+    align-content: center;
     align-items: center;
 }
-.contenedor_hijo{
+
+.box{
+    display: grid;
+    grid-template-columns: 360px 360px 360px 360px;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 5rem;
+}
+.content{
     padding: 10px;
+    margin: 0 auto;
+}
+h2{
+    background-color: gold;
+    font-size: 5rem;
+    font-family: cursive;
 }
 
 </style>

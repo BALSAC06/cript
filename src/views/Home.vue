@@ -1,26 +1,26 @@
 <template>
 
 
+    <h2> PERSONAJES</h2>
+  <div class="body">
+    <div style="" class="box">
+        <section  style="padding-bottom: 1rem; font-family:cursive ;padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :black; border: solid gold 2px;" v-for="value in character" >
 
-
-<div style="" class="contenedor">
-    <section  style="padding-bottom: 1rem; padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :green; border: solid green 2px;" v-for="value in character" >
-
-        <div class="contendor_hijo">
-            <img v-bind:src="value.image" alt="" width="150" height="150" >
-        
-            <div style="padding-top: 1.5rem;">    
-                {{ value.name }}
-            </div>
-
-            <div style="padding-top: 1rem;">
-                {{value.type }}
+            <div class="content">
+                <img v-bind:src="value.image" alt="" width="150" height="150" >
             
-            </div>
-        </div>
-    </section>
-</div>
+                <div style="padding-top: 1.5rem;">    
+                    {{ value.name }}
+                </div>
 
+                <div style="padding-top: 1rem;">
+                    {{value.type }}
+                
+                </div>
+            </div>
+        </section>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -49,29 +49,41 @@ const getCharacter= async()=>{
 
 <style scoped>
 
-.contenedor{
+.body{
+    background-image: url(../c137.webp);
+    align-items: center;
+    align-content: center;
+
+}
+.box{
     
     display: grid;
-    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: 360px 360px 360px 360px;
     align-items: center;
-    
+    padding: 1rem;
+    margin: 0 auto;
 }
-.contenedor_hijo{
+.content{
     padding: 10px;
     width: 70%;
+    align-content: center;
+
+}
+h2{
+    font-size: 5rem;
+    background-color: gold;
+    font-family: cursive;
+}
+@media (max-width: 800px) {
+ 
 }
 
-@media (max-width: 767px) {
-  /* Estilos para teléfonos móviles */
-  
+@media (min-width: 800px) and (max-width: 991px) {
+ 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Estilos para tabletas */
-}
-
-@media (min-width: 992px) {
-  /* Estilos para computadoras de escritorio */
+@media (min-width: 1000px) {
+ 
 }
 
 

@@ -1,17 +1,13 @@
 <template>
-  <div>
-    <div style="text-align: center; margin: 5rem; " >
-      <router-link to="/location" style="border-radius: 1rem; margin: 2rem; background-color: yellow; padding: 2rem; font-size: 2rem; color: black; text-decoration: none;">Location</router-link>
-      <router-link to="/"  style="border-radius: 1rem; margin: 2rem;  background-color: yellow; padding: 2rem; font-size: 2rem; color: black; text-decoration: none;">Home</router-link>
-    </div>
-    
     <Navbar></Navbar> 
-    
+    <header style="text-align: center;font-family:cursive; font-size: 6rem; color: gold; padding-top: 1.5rem;
+    ">
+    Información
+    </header>
+
    
     <router-view /> 
-    
-    
-  </div>
+  
 </template>
 <script setup>
 
@@ -23,6 +19,11 @@ import Navbar from './components/Nabar.vue'
 
 <style>
 
-
+body{
+  background-color: rgb(143, 139, 139);
+  width: 1600px;
+  height: 10rem;
+  align-content:center;
+}
 
 </style>
