@@ -1,18 +1,22 @@
 <template>
-    <div>Location</div>
-
-    <div style="" class="contenedor">
-        <section  style="padding-bottom: 1rem; padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :green; border: solid green 2px;" v-for="value in character" >
-
-            <div class="contendor_hijo">
-            <img v-bind:src="value.image" alt="" width="150" height="150" >
+    
+   
+    <div class="contenedor">
+        <section  style="padding-bottom: 1rem; padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :green; border: solid green 4px;" v-for="value in character" >
+        
+        <div class="contendor_hijo">
+            
+            <div>
+                
+                {{ value.name }}
+            </div>
         
             <div style="padding-top: 1.5rem;">    
-                {{ value.name }}
+                {{ value.type }}
             </div>
 
             <div style="padding-top: 1rem;">
-                {{value.type }}
+                {{value.dimension }}
             
             </div>
         </div>
@@ -30,10 +34,10 @@ onMounted(() => {
     getCharacter(); 
 })
 
-
+const character= ref(null);
 
 const getCharacter= async()=>{
-    await axios.get('https://rickandmortyapi.com/api/character')
+    await axios.get('https://rickandmortyapi.com/api/location')
 
     .then((resolve)=> {
         character.value=resolve.data.results

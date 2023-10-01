@@ -1,5 +1,8 @@
 <template>
 
+
+
+
 <div style="" class="contenedor">
     <section  style="padding-bottom: 1rem; padding-top:1rem ; display: block; text-align: center; margin: 1rem; color :green; border: solid green 2px;" v-for="value in character" >
 
@@ -44,15 +47,31 @@ const getCharacter= async()=>{
 
 </script>
 
-<style>
+<style scoped>
 
 .contenedor{
+    
     display: grid;
-    grid-template-columns: 320px 320px 320px;
+    grid-template-columns: 350px 350px 350px;
     align-items: center;
+    
 }
 .contenedor_hijo{
     padding: 10px;
+    width: 70%;
+}
+
+@media (max-width: 767px) {
+  /* Estilos para teléfonos móviles */
+  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Estilos para tabletas */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para computadoras de escritorio */
 }
 
 
